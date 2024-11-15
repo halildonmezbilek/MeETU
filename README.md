@@ -13,6 +13,8 @@ MeETU is an advanced Retrieval-Augmented Generation (RAG) chatbot designed to pr
 - User-friendly interface via Streamlit.
 
 ---
+![MeETU Demo](Diagrams/demo.gif)
+---
 
 ## **Project Tree**
 
