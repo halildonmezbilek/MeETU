@@ -3,3 +3,7 @@
 server.htpasswd
 .python-version
 models/
+Hold/
+chat_history.json
+user_history
+Temp-hold
