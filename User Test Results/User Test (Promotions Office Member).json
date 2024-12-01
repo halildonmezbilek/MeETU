@@ -16,7 +16,7 @@
     {
       "role": "assistant",
       "content": "METU's Department of Basic English (DBE) offers several Italian language courses, but I couldn't find any specific information on them. However, I can suggest some possible courses that might be available:\n\n* ITAL203: An intermediate level course in spoken and written Italian.\n\nPlease note that the availability of these courses may vary depending on the semester or academic year. If you're interested in learning more about the Italian language courses offered by DBE at METU, I recommend checking the university's course catalog or contacting the department directly for the most up-to-date information."
-    },
+    },#The question structure was wrong (since DBE only gave English related courses), the answer is not rated
     {
       "role": "user",
       "content": "What are the Italian language courses in METU?"
