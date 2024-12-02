@@ -13,15 +13,16 @@ MeETU is an Retrieval-Augmented Generation (RAG) chatbot designed to provide int
 - User-friendly interface via Streamlit.
 
 ```
-
----
+![Demo of MeETU](https://github.com/halildonmezbilek/MeETU/raw/main/Diagrams/demo.gif)
+```
 
 ## **Installation**
 
 ### 1. Clone the Repository
+
 ```bash
-git clone https://github.com/halildonmezbilek/meetu-rag.git
-cd meetu-rag
+git clone [https://github.com/halildonmezbilek/meetu-rag.git](https://github.com/halildonmezbilek/MeETU.git)
+cd MeTU
 ```
 
 ### 2. Install Dependencies
