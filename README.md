@@ -12,9 +12,9 @@ MeETU is an Retrieval-Augmented Generation (RAG) chatbot designed to provide int
 - Powered by FAISS for efficient embedding storage and retrieval.
 - User-friendly interface via Streamlit.
 
-```
+
 ![Demo of MeETU](https://github.com/halildonmezbilek/MeETU/raw/main/Diagrams/demo.gif)
-```
+
 
 ## **Installation**
 
