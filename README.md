@@ -21,12 +21,12 @@ MeETU is an Retrieval-Augmented Generation (RAG) chatbot designed to provide int
 ### 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/halildonmezbilek/meetu-rag.git](https://github.com/halildonmezbilek/MeETU.git)
+git clone https://github.com/halildonmezbilek/MeETU.git
 cd MeTU
 ```
 
 ### 2. Install Dependencies
-Ensure you have Python 3.10 or above and install required packages:
+Ensure you have Python 3.10 or above and install the required packages:
 ```bash
 pip install -r requirements.txt
 ```
