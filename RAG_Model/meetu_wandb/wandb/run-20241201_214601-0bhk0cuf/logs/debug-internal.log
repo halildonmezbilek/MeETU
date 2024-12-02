@@ -1,0 +1,17 @@
+{"time":"2024-12-01T21:46:01.706318948+03:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-12-01T21:46:01.706341843+03:00","level":"INFO","msg":"created symlink","path":"/home/halil/Desktop/MeETU/RAG_Model/meetu_wandb/wandb/run-20241201_214601-0bhk0cuf/logs/debug-core.log"}
+{"time":"2024-12-01T21:46:01.808543146+03:00","level":"INFO","msg":"created new stream","id":"0bhk0cuf"}
+{"time":"2024-12-01T21:46:01.808561171+03:00","level":"INFO","msg":"stream: started","id":"0bhk0cuf"}
+{"time":"2024-12-01T21:46:01.808682278+03:00","level":"INFO","msg":"writer: Do: started","stream_id":"0bhk0cuf"}
+{"time":"2024-12-01T21:46:01.808796059+03:00","level":"INFO","msg":"handler: started","stream_id":"0bhk0cuf"}
+{"time":"2024-12-01T21:46:01.80880655+03:00","level":"INFO","msg":"sender: started","stream_id":"0bhk0cuf"}
+{"time":"2024-12-01T21:46:02.131118471+03:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-01T22:09:45.613601218+03:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-01T22:09:45.613906187+03:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-01T22:09:46.614694814+03:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact evaluation_results","runtime_seconds":1.004023658,"subtasks":[{"desc":"results_df.csv","runtime_seconds":0.041403052,"progress":"160.0KB/802.0KB"}]}],"total_operations":1}}
+{"time":"2024-12-01T22:09:49.359518403+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-01T22:09:50.651167511+03:00","level":"INFO","msg":"stream: closing","id":"0bhk0cuf"}
+{"time":"2024-12-01T22:09:50.651200637+03:00","level":"INFO","msg":"handler: closed","stream_id":"0bhk0cuf"}
+{"time":"2024-12-01T22:09:50.651215243+03:00","level":"INFO","msg":"writer: Close: closed","stream_id":"0bhk0cuf"}
+{"time":"2024-12-01T22:09:50.651262522+03:00","level":"INFO","msg":"sender: closed","stream_id":"0bhk0cuf"}
+{"time":"2024-12-01T22:09:50.65133059+03:00","level":"INFO","msg":"stream: closed","id":"0bhk0cuf"}

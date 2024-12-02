@@ -1,0 +1,17 @@
+{"time":"2024-12-01T21:22:41.243798675+03:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-12-01T21:22:41.2438153+03:00","level":"INFO","msg":"created symlink","path":"/home/halil/Desktop/MeETU/RAG_Model/meetu_wandb/wandb/run-20241201_212241-d34pemyq/logs/debug-core.log"}
+{"time":"2024-12-01T21:22:41.346831045+03:00","level":"INFO","msg":"created new stream","id":"d34pemyq"}
+{"time":"2024-12-01T21:22:41.34685254+03:00","level":"INFO","msg":"stream: started","id":"d34pemyq"}
+{"time":"2024-12-01T21:22:41.346916414+03:00","level":"INFO","msg":"writer: Do: started","stream_id":"d34pemyq"}
+{"time":"2024-12-01T21:22:41.346945122+03:00","level":"INFO","msg":"handler: started","stream_id":"d34pemyq"}
+{"time":"2024-12-01T21:22:41.347003588+03:00","level":"INFO","msg":"sender: started","stream_id":"d34pemyq"}
+{"time":"2024-12-01T21:22:41.666596181+03:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-01T21:23:02.724535755+03:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-01T21:23:02.726598432+03:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-01T21:23:03.658550531+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-01T21:23:03.684903303+03:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading summary, console logs","runtime_seconds":0.025817903}],"total_operations":1}}
+{"time":"2024-12-01T21:23:05.003326963+03:00","level":"INFO","msg":"stream: closing","id":"d34pemyq"}
+{"time":"2024-12-01T21:23:05.003337527+03:00","level":"INFO","msg":"handler: closed","stream_id":"d34pemyq"}
+{"time":"2024-12-01T21:23:05.003342123+03:00","level":"INFO","msg":"writer: Close: closed","stream_id":"d34pemyq"}
+{"time":"2024-12-01T21:23:05.003380499+03:00","level":"INFO","msg":"sender: closed","stream_id":"d34pemyq"}
+{"time":"2024-12-01T21:23:05.003383948+03:00","level":"INFO","msg":"stream: closed","id":"d34pemyq"}

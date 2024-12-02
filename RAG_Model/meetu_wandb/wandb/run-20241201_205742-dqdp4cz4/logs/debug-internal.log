@@ -1,0 +1,17 @@
+{"time":"2024-12-01T20:57:42.937210975+03:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-12-01T20:57:42.937265622+03:00","level":"INFO","msg":"created symlink","path":"/home/halil/Desktop/MeETU/RAG_Model/meetu_wandb/wandb/run-20241201_205742-dqdp4cz4/logs/debug-core.log"}
+{"time":"2024-12-01T20:57:43.041472198+03:00","level":"INFO","msg":"created new stream","id":"dqdp4cz4"}
+{"time":"2024-12-01T20:57:43.041501257+03:00","level":"INFO","msg":"stream: started","id":"dqdp4cz4"}
+{"time":"2024-12-01T20:57:43.041552689+03:00","level":"INFO","msg":"sender: started","stream_id":"dqdp4cz4"}
+{"time":"2024-12-01T20:57:43.041541228+03:00","level":"INFO","msg":"writer: Do: started","stream_id":"dqdp4cz4"}
+{"time":"2024-12-01T20:57:43.041542995+03:00","level":"INFO","msg":"handler: started","stream_id":"dqdp4cz4"}
+{"time":"2024-12-01T20:57:43.328077671+03:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-01T21:22:34.222746366+03:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-01T21:22:34.223339946+03:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-01T21:22:35.223889062+03:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact evaluation_results","runtime_seconds":1.00450428,"subtasks":[{"desc":"results_df.csv","runtime_seconds":0.160609531,"progress":"704.0KB/809.5KB"}]},{"desc":"uploading output.log","runtime_seconds":0.354074779,"progress":"694B/694B"}],"total_operations":2}}
+{"time":"2024-12-01T21:22:37.991333011+03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-01T21:22:39.299896049+03:00","level":"INFO","msg":"stream: closing","id":"dqdp4cz4"}
+{"time":"2024-12-01T21:22:39.299913362+03:00","level":"INFO","msg":"handler: closed","stream_id":"dqdp4cz4"}
+{"time":"2024-12-01T21:22:39.299921763+03:00","level":"INFO","msg":"writer: Close: closed","stream_id":"dqdp4cz4"}
+{"time":"2024-12-01T21:22:39.299941745+03:00","level":"INFO","msg":"sender: closed","stream_id":"dqdp4cz4"}
+{"time":"2024-12-01T21:22:39.299991791+03:00","level":"INFO","msg":"stream: closed","id":"dqdp4cz4"}

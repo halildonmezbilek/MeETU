@@ -1,0 +1,12 @@
+wandb_version: 1
+
+chunk_overlap:
+  value: 50
+chunk_size:
+  value: 500
+embed_model_name:
+  value: all-MiniLM-L6-v2
+llm_model_name:
+  value: mistralai/Mistral-7B-Instruct-v0.3
+top_k:
+  value: 5

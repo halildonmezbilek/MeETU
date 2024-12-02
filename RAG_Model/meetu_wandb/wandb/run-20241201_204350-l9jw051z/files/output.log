@@ -1,0 +1,60 @@
+FAISS vector store created with 8570 documents.
+Traceback (most recent call last):
+  File "/home/halil/.pyenv/versions/DI502/lib/python3.10/site-packages/huggingface_hub/utils/_errors.py", line 304, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/halil/.pyenv/versions/DI502/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/halil/.pyenv/versions/DI502/lib/python3.10/site-packages/huggingface_hub/inference/_client.py", line 273, in post
+    hf_raise_for_status(response)
+  File "/home/halil/.pyenv/versions/DI502/lib/python3.10/site-packages/huggingface_hub/utils/_errors.py", line 371, in hf_raise_for_status
+    raise HfHubHTTPError(str(e), response=response) from e
+huggingface_hub.utils._errors.HfHubHTTPError: 503 Server Error: Service Unavailable for url: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B (Request ID: XjhMnj8y1Y_di6CEKTJf5)
+
+Model meta-llama/Llama-3.2-1B is currently loading
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/halil/Desktop/MeETU/RAG_Model/meetu_wandb/meetu_wandb_main.py", line 164, in sweep_fn
+    results, results_df, results_df_metrics_stats, average_latency = meetu_evaluate_metrics(
+  File "/home/halil/Desktop/MeETU/RAG_Model/meetu_wandb/meetu_test_eval.py", line 110, in meetu_evaluate_metrics
+    test_data["response"], test_data["retrieved_contexts"], test_data["latency"] = zip(*test_data["user_input"].apply(meetu_generate_response))
+  File "/home/halil/.pyenv/versions/DI502/lib/python3.10/site-packages/pandas/core/series.py", line 4924, in apply
+    ).apply()
+  File "/home/halil/.pyenv/versions/DI502/lib/python3.10/site-packages/pandas/core/apply.py", line 1427, in apply
+    return self.apply_standard()
+  File "/home/halil/.pyenv/versions/DI502/lib/python3.10/site-packages/pandas/core/apply.py", line 1507, in apply_standard
+    mapped = obj._map_values(
+  File "/home/halil/.pyenv/versions/DI502/lib/python3.10/site-packages/pandas/core/base.py", line 921, in _map_values
+    return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+  File "/home/halil/.pyenv/versions/DI502/lib/python3.10/site-packages/pandas/core/algorithms.py", line 1743, in map_array
+    return lib.map_infer(values, mapper, convert=convert)
+  File "lib.pyx", line 2972, in pandas._libs.lib.map_infer
+  File "/home/halil/Desktop/MeETU/RAG_Model/meetu_wandb/meetu_test_eval.py", line 98, in meetu_generate_response
+    response, context = generate_chain_output(row)
+  File "/home/halil/Desktop/MeETU/RAG_Model/meetu_wandb/meetu_test_eval.py", line 49, in generate_chain_output
+    chain_output = rag_chain.invoke(question)
+  File "/home/halil/.pyenv/versions/DI502/lib/python3.10/site-packages/langchain_core/runnables/base.py", line 3024, in invoke
+    input = context.run(step.invoke, input, config)
+  File "/home/halil/.pyenv/versions/DI502/lib/python3.10/site-packages/langchain_core/language_models/llms.py", line 390, in invoke
+    self.generate_prompt(
+  File "/home/halil/.pyenv/versions/DI502/lib/python3.10/site-packages/langchain_core/language_models/llms.py", line 755, in generate_prompt
+    return self.generate(prompt_strings, stop=stop, callbacks=callbacks, **kwargs)
+  File "/home/halil/.pyenv/versions/DI502/lib/python3.10/site-packages/langchain_core/language_models/llms.py", line 950, in generate
+    output = self._generate_helper(
+  File "/home/halil/.pyenv/versions/DI502/lib/python3.10/site-packages/langchain_core/language_models/llms.py", line 792, in _generate_helper
+    raise e
+  File "/home/halil/.pyenv/versions/DI502/lib/python3.10/site-packages/langchain_core/language_models/llms.py", line 779, in _generate_helper
+    self._generate(
+  File "/home/halil/.pyenv/versions/DI502/lib/python3.10/site-packages/langchain_core/language_models/llms.py", line 1502, in _generate
+    self._call(prompt, stop=stop, run_manager=run_manager, **kwargs)
+  File "/home/halil/.pyenv/versions/DI502/lib/python3.10/site-packages/langchain_huggingface/llms/huggingface_endpoint.py", line 312, in _call
+    response = self.client.post(
+  File "/home/halil/.pyenv/versions/DI502/lib/python3.10/site-packages/huggingface_hub/inference/_client.py", line 283, in post
+    raise InferenceTimeoutError(
+huggingface_hub.errors.InferenceTimeoutError: Model not loaded on the server: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B. Please retry with a higher timeout (current: 120).

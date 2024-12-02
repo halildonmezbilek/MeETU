@@ -1,51 +1,17 @@
 
 # MeETU - Retrieval-Augmented Generation (RAG) Model
 
-MeETU is an advanced Retrieval-Augmented Generation (RAG) chatbot designed to provide intelligent question-answering and recommendations based on METU's (Middle East Technical University) FAQs and website content. The project leverages state-of-the-art technologies such as the **Zephyr-7B-Beta** model from Hugging Face, ChromaDB, and Streamlit to deliver accurate and efficient responses.
+MeETU is an Retrieval-Augmented Generation (RAG) chatbot designed to provide intelligent question-answering and recommendations based on METU's (Middle East Technical University) FAQs and website content. The project leverages state-of-the-art technologies such as the **meta-llama/Llama-3.2-3B-Instruct** model from Hugging Face, FAISS, and Streamlit to deliver accurate and efficient responses.
 
 ---
 
 ## **Features**
 
-- Advanced RAG architecture using `HuggingFaceH4/zephyr-7b-beta` for natural language processing.
+- Advanced RAG architecture using `meta-llama/Llama-3.2-3B-Instruct` for natural language processing.
 - Handles question-answering and recommendation tasks.
-- Powered by ChromaDB for efficient embedding storage and retrieval.
+- Powered by FAISS for efficient embedding storage and retrieval.
 - User-friendly interface via Streamlit.
 
----
-![MeETU Demo](Diagrams/demo.gif)
----
-
-## **Project Tree**
-
-Here's an overview of the project structure:
-
-```
-MeETU
-├── Data/                       # Contains datasets for FAQs and testing
-│   ├── FAQs_eng.xlsx
-│   ├── How_will_you_register.xlsx
-│   ├── REGISTRATION_PROCEDURES.xlsx
-│   ├── TestDataset/
-│   │   ├── FinalTestDataset.xlsx
-│   │   ├── MeETUTestDataset2.xlsx
-│   │   ├── ...
-│   │   └── TestDataset.csv
-│   ├── accomadation_eng.xlsx
-│   ├── courses_eng.xlsx
-│   └── ...
-├── Diagrams/
-│   └── RAGSystemDesigndrawio.drawio   # RAG architecture diagram
-├── RAG_Model/
-│   ├── app2.py
-│   ├── rag_model.py              # Core RAG logic
-│   ├── chroma_vdb_creation.ipynb # Notebook for creating ChromaDB
-│   ├── requirements.txt          # Python dependencies
-│   ├── streamlit_meetu.py        # Streamlit app file
-│   ├── models/                   # Excluded in `.gitignore`
-│   ├── user_history/             # Excluded in `.gitignore`
-│   └── ...
-└── README.md                     # Project documentation
 ```
 
 ---
@@ -72,24 +38,6 @@ python run RAG_Model/flask_meetu.py
 
 ---
 
-## **Using Docker**
-
-### 1. Pull the Docker Image
-Pull the prebuilt Docker image for the project:
-```bash
-docker pull halildonmezbilek/meetu-chromadb
-```
-
-### 2. Run the Docker Container
-Run the application using:
-```bash
-docker run -d -p 6854:8000 halildonmezbilek/meetu-chromadb
-```
-
-Visit `http://localhost:6854` to access the app.
-
----
-Please request the login information via email.
 
 
 
@@ -269,7 +217,7 @@ Your Nginx server will now redirect HTTP to HTTPS and secure the connection.
 - **Environment Variables**:
   - `.env` file stores sensitive information like API keys.
 - **Ignored Files**:
-  Files such as `models/`, `user_history/`, and `chroma/` are excluded from version control.
+  Files such as `models/`, `user_history/`, and some others are excluded from version control.
 
 ---
 

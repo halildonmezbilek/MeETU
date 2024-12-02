@@ -7,3 +7,5 @@ Hold/
 chat_history.json
 user_history
 Temp-hold
+streamlit_meetu_context.py
+/old_versions

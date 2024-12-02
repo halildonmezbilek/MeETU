@@ -1,13 +1,9 @@
-from langchain.prompts import PromptTemplate
-from langchain_chroma.vectorstores import Chroma
-from langchain_ollama import OllamaLLM
+from langchain_core.prompts import ChatPromptTemplate
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough, Runnable
-from transformers import AutoTokenizer, AutoModelForCausalLM
-from huggingface_hub import InferenceClient
-import chromadb
-from chromadb.config import Settings
+from langchain_huggingface import HuggingFaceEndpoint
+from langchain_community.vectorstores import FAISS
 import os
 from dotenv import load_dotenv
 import streamlit as st
@@ -16,109 +12,67 @@ import asyncio
 
 load_dotenv()
 
-#################### ChromaDB and Embedding Model Setup ####################
+embedding_model_name = "all-MiniLM-L6-v2"
+faiss_local_dir = f"vectordatabase/faiss_index_{embedding_model_name}"
+chunk_size_of_embeddings = 500
+llm_model_name = "meta-llama/Llama-3.2-3B-Instruct"
+top_k=5
 
-@st.cache_resource
-def get_chroma_client():
-    return chromadb.HttpClient(
-        host="localhost",
-        port=6854,
-        settings=Settings(
-            chroma_client_auth_provider="chromadb.auth.basic_authn.BasicAuthClientProvider",
-            chroma_client_auth_credentials=os.getenv("CHROMA_CLIENT_AUTH_CREDENTIALS")
-        )
-    )
+
+#################### Embedding Model Setup ####################
 
 @st.cache_resource
 def get_embedding_model():
-    return HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    return HuggingFaceEmbeddings(model_name=embedding_model_name)
 
-@st.cache_resource
-def get_vector_store(_client, _embedding_model):
-    return Chroma(
-        collection_name="MeETUVectorDB_Chunks",
-        embedding_function=_embedding_model,
-        persist_directory="/home/halil/Desktop/MeETU/RAG_Model/chroma_db",
-        client=_client
-    )
-
-@st.cache_resource
-def get_ollama_llm():
-    return OllamaLLM(
-        model="hf.co/bartowski/Meta-Llama-3.1-8B-Instruct-GGUF:Q6_K",
-        temperature=0.1,
-        base_url="http://localhost:11434"
-    )
-
-#################### Custom Runnable for Hugging Face ####################
-
-@st.cache_resource
-def get_huggingface_llm():
-    hf_api_token = os.getenv("HUGGINGFACE_API_TOKEN")
-    return InferenceClient(model="HuggingFaceH4/zephyr-7b-beta", token=hf_api_token)
-
-class HuggingFaceChatCompletionRunnable(Runnable):
-    def __init__(self, inference_client):
-        self.inference_client = inference_client
-
-    def invoke(self, question, config=None):
-        if hasattr(question, "to_string"):
-            question = question.to_string()
-        messages = [{"role": "user", "content": question}]
-        response = self.inference_client.chat_completion(messages, max_tokens=8000)
-        return response["choices"][0]["message"]["content"]
-
-###########################################################
-
-@st.cache_resource
-def get_local_huggingface_llm():
-    tokenizer = AutoTokenizer.from_pretrained("HuggingFaceH4/zephyr-7b-beta")
-    model = AutoModelForCausalLM.from_pretrained("HuggingFaceH4/zephyr-7b-beta")
-    return model, tokenizer
-
-class LocalHuggingFaceLLMRunnable(Runnable):
-    def __init__(self, model, tokenizer):
-        self.model = model.to("cuda")
-        self.tokenizer = tokenizer  
-
-    def invoke(self, question, config=None):
-        inputs = self.tokenizer(question, return_tensors="pt")
-        outputs = self.model.generate(**inputs, max_length=8000, num_return_sequences=1)
-        return self.tokenizer.decode(outputs[0], skip_special_tokens=True)
-    
-###########################################################
-
-client = get_chroma_client()
 embedding_model = get_embedding_model()
-vector_store = get_vector_store(_client=client, _embedding_model=embedding_model)
-retriever = vector_store.as_retriever(search_type="similarity", 
-                                      search_kwargs={"k": 7})
-def select_llm(model_type=None):
-    if model_type == "Ollama":
-        return get_ollama_llm()
-    elif model_type == "HuggingFace":
-        return HuggingFaceChatCompletionRunnable(get_huggingface_llm())
-    elif model_type == "LocalHuggingFace":
-        model, tokenizer = get_local_huggingface_llm()
-        return LocalHuggingFaceLLMRunnable(model, tokenizer)
+vector_store = FAISS.load_local(
+    faiss_local_dir, embedding_model, allow_dangerous_deserialization=True
+)
 
-llm = select_llm("HuggingFace")
+#################### HuggingFace LLM ####################
+
+#@st.cache_resource
+llm = HuggingFaceEndpoint(
+    repo_id=llm_model_name,
+    huggingfacehub_api_token=os.getenv("HUGGINGFACE_API_TOKEN"),
+    max_new_tokens=3500-chunk_size_of_embeddings,
+    temperature=0.1
+)
+
+###########################################################
+
+retriever = vector_store.as_retriever(search_type="mmr", search_kwargs={"k": top_k})
 
 #################### Prompt Template ####################
-prompt_template = PromptTemplate(
-    input_variables=["context", "question"],
-    template=(
-        "You are an advanced AI assistant for prospective students of Middle East Technical University (METU), designed to provide accurate, helpful, and detailed information. "
-        "Your role is to answer students' questions about METU's programs, campus life, application processes, facilities, and any other general information. "
-        "Use a friendly and approachable tone, and whenever possible, include details that would help students make an informed decision. "
-        "{context}\n\nUser: {question}\nAssistant:"
-    )
-)
+
+template = """
+You are an advanced AI assistant for prospective students of Middle East Technical University (METU), designed to provide accurate, helpful, and detailed information.
+Your role is to answer students' questions about METU's programs, campus life, application processes, facilities, and any other general information.
+Use a friendly and approachable tone, and whenever possible, include details that would help students make an informed decision.
+You will respond the user's language.
+
+User:
+{question}
+
+
+Context:
+{context}
+
+
+Answer:
+"""
+
+prompt = ChatPromptTemplate.from_template(template) 
+
 
 #################### Helper Functions ####################
 
 def format_docs(docs):
+    if not docs:
+        return "No relevant context found."
     return "\n\n".join([doc.page_content for doc in docs])
+
 
 #################### RAG Chain Setup ####################
 
@@ -127,10 +81,21 @@ rag_chain = (
         "context": retriever | format_docs,
         "question": RunnablePassthrough()
     }
-    | prompt_template
+    | prompt
     | llm
     | {"response": StrOutputParser(), "contexts": retriever }
 )
+
+rag_chain_tru = (
+    {
+        "context": retriever | format_docs,
+        "question": RunnablePassthrough()
+    }
+    | prompt
+    | llm
+    | StrOutputParser()
+)
+
 
 #################### Generate Response Using RAG Chain ####################
 def generate_response(question):
@@ -142,8 +107,8 @@ async def agenerate_response(question):
     chain_output = await loop.run_in_executor(None, rag_chain.invoke, question)
     return chain_output["response"]
 
+
 async def agenerate_chain_output(question):
     loop = asyncio.get_running_loop()
     chain_output = await loop.run_in_executor(None, rag_chain.invoke, question)
     return chain_output
-
