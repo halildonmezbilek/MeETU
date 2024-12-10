@@ -13,8 +13,8 @@ def index():
     session_id = str(uuid4())
     session['session_id'] = session_id
     
-    #streamlit_url = f"http://localhost:{STREAMLIT_PORT}?session_id={session_id}"
-    streamlit_url = f"http://meetu.halildonmezbilek.com/streamlit/?session_id={session_id}"
+    streamlit_url = f"http://localhost:{STREAMLIT_PORT}?session_id={session_id}"
+    #streamlit_url = f"http://meetu.halildonmezbilek.com/streamlit/?session_id={session_id}"
     return redirect(streamlit_url)
 
 def run_streamlit():

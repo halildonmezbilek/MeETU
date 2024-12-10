@@ -1,3 +1,4 @@
+import asyncio
 import streamlit as st
 st.set_page_config(page_title="MeETU", page_icon="logo.png")
 
@@ -5,7 +6,7 @@ st.set_page_config(page_title="MeETU", page_icon="logo.png")
 import json
 import os
 import time
-from rag_model import generate_response
+from rag_model import generate_response, agenerate_response
 from uuid import uuid4
 
 
@@ -58,7 +59,8 @@ def main():
         with st.chat_message("user"):
             st.markdown(prompt)
         start_time = time.time()
-        response_content = generate_response(prompt)
+        #response_content = generate_response(prompt)
+        response_content = asyncio.run(agenerate_response(prompt))
         response_time = time.time() - start_time
 
         with st.chat_message("assistant"):
