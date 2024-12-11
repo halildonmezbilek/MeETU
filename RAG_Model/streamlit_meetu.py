@@ -1,13 +1,59 @@
 import asyncio
 import streamlit as st
-st.set_page_config(page_title="MeETU", page_icon="logo.png")
-
-
 import json
 import os
 import time
-from rag_model import generate_response, agenerate_response
+from rag_model import MeETUAssistant
 from uuid import uuid4
+import base64
+
+
+
+st.set_page_config(page_title="MeETU", page_icon="logo.png")
+
+
+# Function to encode the image in Base64
+def get_base64_image(file_path):
+    with open(file_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode()
+
+# Encode the image
+encoded_image = get_base64_image("MEETU_BOT_transparant.png")
+
+# Add the image with inline CSS
+st.markdown(
+    f"""
+    <style>
+    .custom-logo {{
+        position: absolute;
+        top: 100px;  
+        left: -350px; 
+        width: 300px; 
+    }}
+    .about-meetu{{
+        position: absolute;
+        top: 1x; 
+        right: -375px; 
+        text-align: left;
+        width: 300px; 
+    }}
+    </style>
+    <img src="data:image/png;base64,{encoded_image}" class="custom-logo">
+
+    <div class="about-meetu">
+        <h2>About MeETU</h2>
+        <p>MeETU is a chatbot designed to assist users with questions about METU (Middle East Technical University).</p>
+        <h3>Features:</h3>
+        <ul>
+            <li>Provides information about programs, campus life, and facilities.</li>
+            <li>Answers application-related queries.</li>
+            <li>Offers guidance on university processes.</li>
+        </ul>
+        <p>Whether you're a prospective student or a curious visitor, MeETU is here to help!</p>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 
 
 USER_HISTORY_DIR = 'user_history'
@@ -23,6 +69,21 @@ session_id = st.session_state.session_id
 DB_FILE = os.path.join(USER_HISTORY_DIR, f'{session_id}.json')
 
 def main():
+    meetu_assistant = MeETUAssistant(
+            isstreamlitapp=False,
+            embedding_model_name="all-MiniLM-L6-v2",
+            vectorstore_dir="path/to/vectorstore",
+            llm_repo_id="your_repo_id",
+            llm_api_token="your_api_token",
+            max_new_tokens=3500,
+            search_type="mmr",
+            top_k=5,
+            temperature=0.3
+        )
+    
+
+    st.title("Meet METU with MeETU")  
+
     if os.path.exists(DB_FILE):
         try:
             with open(DB_FILE, 'r') as file:
@@ -60,7 +121,7 @@ def main():
             st.markdown(prompt)
         start_time = time.time()
         #response_content = generate_response(prompt)
-        response_content = asyncio.run(agenerate_response(prompt))
+        response_content = asyncio.run(meetu_assistant.agenerate_response(prompt))
         response_time = time.time() - start_time
 
         with st.chat_message("assistant"):
@@ -72,6 +133,7 @@ def main():
 
         st.write(f"_Response generated in {round(response_time, 3)} seconds_")
         st.rerun()
+
 
 def update_db(messages):
     db = {'chat_history': messages}
