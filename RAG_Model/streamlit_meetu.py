@@ -8,19 +8,19 @@ from uuid import uuid4
 import base64
 
 
-
+# UI PARTS 
 st.set_page_config(page_title="MeETU", page_icon="logo.png")
 
 
-# Function to encode the image in Base64
+# Function to encode the MeETU logo in Base64 
 def get_base64_image(file_path):
     with open(file_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode()
 
-# Encode the image
+# Encode the MeETU logo
 encoded_image = get_base64_image("MEETU_BOT_transparant.png")
 
-# Add the image with inline CSS
+# UI parts
 st.markdown(
     f"""
     <style>
@@ -31,29 +31,45 @@ st.markdown(
         width: 300px; 
     }}
     .about-meetu{{
-        position: absolute;
-        top: 1x; 
-        right: -375px; 
+        position: relative;
+        top: 1px; 
+        right: -775px; 
         text-align: left;
         width: 300px; 
     }}
+
+    .disclaimer{{
+        position: relative;
+        top: 20px; 
+        right: -775px;
+        color: gray;
+        font-size: small;
+        width: 300px;
+    }}
+
     </style>
     <img src="data:image/png;base64,{encoded_image}" class="custom-logo">
 
     <div class="about-meetu">
-        <h2>About MeETU</h2>
-        <p>MeETU is a chatbot designed to assist users with questions about METU (Middle East Technical University).</p>
-        <h3>Features:</h3>
+        <h2>Hi, I am MeETU</h2>
+        <p>which is a chatbot designed to assist users with questions about METU (Middle East Technical University).</p>
+        <h3>My features:</h3>
         <ul>
             <li>Provides information about programs, campus life, and facilities.</li>
             <li>Answers application-related queries.</li>
             <li>Offers guidance on university processes.</li>
         </ul>
-        <p>Whether you're a prospective student or a curious visitor, MeETU is here to help!</p>
+        <p>Whether you're a prospective student or a curious visitor, as MeETU I am here to help you!</p>
     </div>
-    """,
+    
+    <div class="disclaimer">
+    <em>MeETU may make errors since an AI algorithm drives all outputs.</em>
+    </div>
+    """
+    ,
     unsafe_allow_html=True,
 )
+
 
 
 USER_HISTORY_DIR = 'user_history'
@@ -133,6 +149,7 @@ def main():
 
         st.write(f"_Response generated in {round(response_time, 3)} seconds_")
         st.rerun()
+
 
 
 def update_db(messages):
