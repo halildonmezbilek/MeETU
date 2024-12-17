@@ -348,7 +348,7 @@ if __name__ == "__main__":
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
 
-    sweep_id = wandb.sweep(sweep_config, project='MeETU_Experiment2')
+    sweep_id = wandb.sweep(sweep_config, project='MeETU_Experiment3')
     wandb.agent(sweep_id, function=sweep_fn, count=10)
 
     loop.close()

@@ -87,11 +87,11 @@ DB_FILE = os.path.join(USER_HISTORY_DIR, f'{session_id}.json')
 def main():
     meetu_assistant = MeETUAssistant(
             isstreamlitapp=False,
-            embedding_model_name="all-MiniLM-L6-v2",
-            vectorstore_dir="path/to/vectorstore",
-            llm_repo_id="your_repo_id",
-            llm_api_token="your_api_token",
-            max_new_tokens=3500,
+            embedding_model_name="paraphrase-multilingual-MiniLM-L12-v2",
+            vectorstore_dir= "vectordatabase/faiss_index_paraphrase-multilingual-MiniLM-L12-v2",
+            llm_repo_id="mistralai/Mistral-7B-Instruct-v0.3",
+            llm_api_token= os.getenv("HUGGINGFACE_API_TOKEN"),
+            max_new_tokens=3000,
             search_type="mmr",
             top_k=5,
             temperature=0.3
