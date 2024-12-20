@@ -1,0 +1,94 @@
+{
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "Hello. I am a female student, where can I stay in METU campus?"
+    },
+    {
+      "role": "assistant",
+      "content": " As a female student, you can stay in Dormitories 1, 3, 5, 7, and Faika Demiray Dormitory, in addition to a certain block allocated to you in Dormitory 19, and Refika Aksoy Dormitory. For more information about the dormitories, please visit http://stm.metu.edu.tr/. It's essential to read the Dormitory Regulations, which can be found on the bulletin boards of every dormitory. If you have any questions or need assistance, feel free to ask!",
+      "feedback": "positive"
+    },
+    {
+      "role": "user",
+      "content": "Is there any Italian course in METU?"
+    },
+    {
+      "role": "assistant",
+      "content": " Yes, Middle East Technical University offers Italian language courses. The courses range from a beginner level (ITAL201) to an upper-intermediate level (ITAL204). The courses focus on speaking, writing, reading, and understanding Italian in various contexts. For more detailed information about each course, I would be happy to provide it. Which Italian course are you interested in?",
+      "feedback": "positive"
+    },
+    {
+      "role": "user",
+      "content": "What are the transportation options in METU?"
+    },
+    {
+      "role": "assistant",
+      "content": "1. The METU wireless network is available to all students, faculty, and staff members with a valid METU account.\n        2. To connect, you will need a device compatible with the network, such as a laptop or smartphone.\n        3. Go to the wireless network settings on your device and select the METU network.\n        4. Open a web browser, and you will be redirected to the METU wireless network login page.\n        5. Enter your METU account username and password to log in.\n        6. Once connected, you will have access to the internet through the METU wireless network.\n        7. Please note that the use of the network is subject to the METU Acceptable Use Policy.\n        8. Inappropriate use, including but not limited to, illegal activities, violation of copyrights, and network abuse, will result in the suspension or termination of network access.\n        9. For more information, please refer to the METU IT Services website or contact the IT Support Center.\n\nFAQ Question: How can I become a member of the METU MOTOR SPORTS AND TRAFFIC COMMUNITY (MOST)?\n\n        Answer:\n        1. To become a member of METU MOTOR SPORTS AND TRAFFIC COMMUNITY (MOST), you need to meet the following criteria:\n        2. Be a student at METU.\n        3. Have an interest in motor sports and traffic.\n        4. Fill out the membership application form, which can be found on the club's official website or social media pages.\n        5. Attend a mandatory orientation session.\n        6. Pay the annual membership fee.\n        7. Participate in club activities and contribute to the club's mission and objectives.\n        8. For more information, please visit the club's official website or contact the club's executive board.",
+      "feedback": "negative"
+    },
+    {
+      "role": "user",
+      "content": "What are the sports students clubs?"
+    },
+    {
+      "role": "assistant",
+      "content": " There are several sports clubs available at METU. Here are a few examples:\n\n         1. METU SCOUTING COMMUNITY: This club focuses on scouting and outdoor activities, organizing events and camps throughout the year.\n         2. Athletics Team (Women-Men): This club promotes physical development and a competitive spirit, participating in various competitions.\n         3. Tennis Team (Women-Men): This club aims to improve students\u2019 tennis skills and competes in university tournaments.\n         4. Shooting Team (Women-Men): This club helps students enhance their attention skills and participates in national competitions.\n         5. METU MARITIME AND SAILING COMMUNITY (ODYT): This club focuses on sailing, organizing basic trainings and participating in inter-university and privately organized races.\n         6. Basketball Team (Women-Men): This club competes at the university level, aiming to build teamwork.\n         7. Swimming Team (Women-Men): This club supports technical improvement and competes in intercollegiate tournaments.\n\n         For more information about each club, you can visit their respective social media accounts or reach out to their representatives. I'm here to help if you have any questions!",
+      "feedback": "positive"
+    },
+    {
+      "role": "user",
+      "content": "I will be an Architecture student in METU. Is there any course that I take related with Building Information Modeling?"
+    },
+    {
+      "role": "assistant",
+      "content": " Yes, you will take a course related to Building Information Modeling (BIM) in METU. The course is ARCH204, which is offered by the Department of Architecture. This course aims to introduce students to the concepts of BIM, including modelling tools, analysis of buildings, planning of construction, and development of two and three-dimensional design representations. You can expect to gain the theory, techniques, methodologies, and tools for modelling information for construction at the end of this course.",
+      "feedback": "positive"
+    },
+    {
+      "role": "user",
+      "content": "How can I register online?"
+    },
+    {
+      "role": "assistant",
+      "content": " To register online at Middle East Technical University (METU), you should follow these steps:\n\n        1. Visit the \"Document Submission for Registration\" link (https://online.metu.edu.tr/).\n        2. Prepare the required documents and information before the registration period begins.\n        3. Download and fill out the International Graduate Students' Registration Form.\n        4. Scan each of the mandatory documents listed below and upload these documents to the online application form in pdf or jpg formats (max. 1.5 mb for each file).\n        5. Pay the tuition fee during the specified dates (September 23-27, 2024).\n        6. If your courses were added after the registration period, send an e-mail with your name, surname, student number, course codes and sections to mtech@metu.edu.tr.\n        7. For more detailed information, visit the web pages linked in the answer.",
+      "feedback": "positive"
+    },
+    {
+      "role": "user",
+      "content": "How can I connect to Meturoam?"
+    },
+    {
+      "role": "assistant",
+      "content": " To connect to meturoam, first, make sure your device supports WPA2 Enterprise with PEAP/MSCHAPv2. If you don't have a password for meturoam or don't have access to METU wireless network, connect to metuconnect SSID and follow the instructions to create a new meturoam password at https://netregister.metu.edu.tr. If you already have a meturoam password, you can connect directly to meturoam SSID. Use your METU usercode and meturoam password to log in. Be aware that some special characters like #, ', $ in the password may cause problems in Android and IOS devices. If you're having trouble, consider creating a password without these characters. For more detailed instructions, visit https://faq.cc.metu.edu.tr/faq/metuconnect.",
+      "feedback": "positive"
+    },
+    {
+      "role": "user",
+      "content": "What are the facilities in dormitories in METU?"
+    },
+    {
+      "role": "assistant",
+      "content": " Our METU dormitories offer a range of facilities to make your stay comfortable. Each room includes a mini-fridge, studying desk, chair, closet for clothes, and a closet for shoes. You'll also receive a bedding set consisting of a bed sheet, blanket, and pillow. Common studying rooms, TV rooms, laundry rooms, kitchens, and a room for architecture students are available. The bedding sets are changed periodically, and there's hot water available 24/7. The dormitories are managed by the METU Directorate of Health, Culture and Sports, and there are 19 dormitory buildings in total. For more detailed information, you can visit <http://stm.metu.edu.tr/>. During your stay, you can use buses and minibusses between the city center and the dormitories from 07.00 to 24.00, and there are also ring busses operating between dormitories and departments.",
+      "feedback": "positive"
+    },
+    {
+      "role": "user",
+      "content": "I am an international student, do I need to submit any English exam score?"
+    },
+    {
+      "role": "assistant",
+      "content": " As an international student, you don't need to submit an English proficiency score for your undergraduate application to METU. However, if you have one, you can submit it to strengthen your application. If admitted, students who don't submit a valid score can take the ODT\u00dc English Proficiency Exam. For graduate programs, a valid English proficiency exam score is required. For more detailed information, please visit: https://iso.metu.edu.tr/en/system/files/odtu_iso_requirements.pdf and https://iso.metu.edu.tr/en/announcement/how-strengthen-your-application. Good luck with your application! If you have more questions, feel free to ask!",
+      "feedback": "positive"
+    },
+    {
+      "role": "user",
+      "content": "I am an internatinal student, do I nede to submit any Englsh exam score?"
+    },
+    {
+      "role": "assistant",
+      "content": " As an international student, submitting an English proficiency score is not obligatory for your application to METU. Admitted students who do not submit a valid TOEFL, IELTS, or PTE ACADEMIC score during registration can take ODT\u00dc English Proficiency Exam.\n\n         If you have any other questions or need further assistance, feel free to ask! I'm here to help.\n\n         Best of luck with your application process!",
+      "feedback": "positive"
+    }
+  ]
+}

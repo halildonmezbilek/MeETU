@@ -1,0 +1,94 @@
+{
+  "chat_history": [
+    {
+      "role": "user",
+      "content": "Where do female students stay in Metu?"
+    },
+    {
+      "role": "assistant",
+      "content": " Hello! I'm here to help you with information about Middle East Technical University (METU).\n\n        Female students can stay in Dormitories 1, 3, 5, 7, and Faika Demiray Dormitory, as well as a certain block allocated to them in Dormitory 19, and Refika Aksoy Dormitory. For guest houses, Osman Yaz\u0131c\u0131 Guest House, Guest House 12, and Dormitory 16 are allocated for female students. Please note that the dormitory applications are evaluated each year based on the current capacity of dormitories, the number of applications, and the conditions for staying in the dormitories.\n\n        If you have any other questions or need further assistance, feel free to ask!",
+      "feedback": "positive"
+    },
+    {
+      "role": "user",
+      "content": "What are the Italian language courses in METU?"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! I'm here to help you with your questions about Middle East Technical University (METU). You asked about Italian language courses, and I have some information for you.\n\n        - ITAL201 is an introduction to basic spoken and written Italian.\n        - ITAL203 is an intermediate level course in spoken and written Italian.\n        - ITAL204 is a continuation of ITAL 203 at an upper-intermediate level.\n        - ITAL202 is a continuation of ITAL 201.\n\n        All these courses are offered by the SCHOOL OF FOREIGN LANGUAGES at METU. If you have any other questions, feel free to ask!",
+      "feedback": "positive"
+    },
+    {
+      "role": "user",
+      "content": "How can students travel in METU campus?"
+    },
+    {
+      "role": "assistant",
+      "content": "1. To access the computers in the PC rooms from off-campus, you will need to use a Virtual Private Network (VPN) connection. You can find the instructions on how to set up a VPN connection on the METU Computing Center website, under the \"VPN Connection\" section.\n\n        2. Alternatively, you can use the remote desktop connection to access the computers in the PC rooms. For this, you will need to have the necessary software installed on your computer and the remote desktop service should be enabled on the computer in the PC room.\n\n        3. Keep in mind that the use of wireless network resources, including the VPN and remote desktop connections, is subject to the rules and conditions set forth within \"METU Computing and Networking Ethics\". You can find the guidelines for the appropriate use of network resources, the rules and regulations, and misconducts & prohibited behaviors on the METU Computing Center website.\n\nTo travel within METU campus, you can walk or use the shuttle buses that run around the campus. The shuttle bus routes can be found on the METU website or at the bus stops. Additionally, there are bicycle rentals available on campus if you prefer to bike.",
+      "feedback": "negative"
+    },
+    {
+      "role": "user",
+      "content": "What are the student clubs related with sports?"
+    },
+    {
+      "role": "assistant",
+      "content": " Hello! I'm here to help you with information about Middle East Technical University (METU) clubs. If you're interested in sports, METU has a variety of clubs to choose from. Here are some examples:\n\n        1. METU SCOUTING COMMUNITY: This group promotes scouting, a worldwide youth movement, and organizes events and camps throughout the year.\n        2. Athletics Team (Women-Men): This team focuses on running, jumping, and throwing events, promoting physical development and a competitive spirit.\n        3. METU MARITIME AND SAILING COMMUNITY (ODYT): This club aims to make METU students love the sea and sailing, and participates in various competitions.\n        4. Tennis Team (Women-Men): This team helps students improve their tennis skills and competes in university tournaments.\n        5. METU MOTOR SPORTS AND TRAFFIC COMMUNITY (MOST): This group brings together motor sports enthusiasts and provides training opportunities.\n        6. Shooting Team (Women-Men): This team helps students enhance their attention skills and participates in national competitions.\n        7. Swimming Team (Women-Men): This team supports technical improvement and competes in intercollegiate tournaments.\n\n         I hope this helps you find the perfect sports club for you at METU! If you have any other questions, feel free to ask.",
+      "feedback": "positive"
+    },
+    {
+      "role": "user",
+      "content": "In the METU campus dormitories what facilities exist?"
+    },
+    {
+      "role": "assistant",
+      "content": " Our METU dormitories offer a range of facilities to make your stay comfortable. Each room comes equipped with a mini-fridge, studying desk, chair, clothes and shoes closets, and a bedding set consisting of bed sheet, blanket, and pillow. You can use the common studying rooms, TV rooms, laundry rooms, kitchens, and a common room for Architecture students. There are automatic washing machines, dryers, irons, and ironing boards available in the laundry rooms. Hot water is available 24/7. For more details about the dormitories, you can visit our official website: [METU Dormitories](http://stm.metu.edu.tr/) or check out our FAQs: [Dormitory FAQs](https://faq.cc.metu.edu.tr/faq/how-can-i-access-computers-pc-rooms-campus) and [Dormitory Regulations](https://faq.cc.metu.edu.tr/faq/what-are-dormitory-rooms-network-rules-and-regulations-use).",
+      "feedback": "positive"
+    },
+    {
+      "role": "user",
+      "content": "Is there any course related with Building Information Modeling provided by Arhitecture deparment?"
+    },
+    {
+      "role": "assistant",
+      "content": " Yes, the Department of Architecture offers a course called ARCH204, which focuses on Building Information Modeling (BIM). This course aims to introduce students to the concepts of BIM and provides them with the theory, techniques, methodologies, and tools for modeling information for construction. The course also covers the analysis of buildings, planning of construction, and development of two and three-dimensional design representations. Additionally, you might find ARCH351 and ARCH453 courses useful as they also cover BIM and architectural detailing.",
+      "feedback": "positive"
+    },
+    {
+      "role": "user",
+      "content": "How students register online?"
+    },
+    {
+      "role": "assistant",
+      "content": " To register online at Middle East Technical University (METU), follow these steps:\n\n         1. Visit the METU Online Registration website (https://oidb.metu.edu.tr/en/kayit-hakkinda-genel-bilgiler).\n\n         2. Make sure you have the required documents and information in a digital format, such as:\n            - METU Graduate Students' Registration Form (if applicable)\n            - ALES / GRE Score Sheet (if applicable)\n            - English Proficiency Score (METU EPE / IELTS / TOEFL / PTE Academic)\n            - Any other documents specified for your program or department\n\n         3. If you are an international student, please visit the web page \"Registration Cancellation\" to get detailed information about registration cancellation.\n\n         4. If you are a graduate student, ensure that you have canceled your registration from your current program before registering for a new one.\n\n         5. Visit the web page \"Tuition Fee Amounts\" to check your tuition fee amount before making the payment. (Tuition fee payment dates: September 23-27, 2024)\n\n         6. Once the registration period begins, click on the \"Document Submission for Registration\" link and follow the instructions to submit your documents online.\n\n         7. If you have any questions or need assistance, please contact the Registrar's Office or the relevant department for further information.\n\n         8. After completing the online registration process, you will receive a confirmation email from METU.\n\n         If you cannot be present in person for enrollment, someone else may complete the enrollment procedures on your behalf provided that a petition is received. International students must be present in person for enrollment at the university.",
+      "feedback": "positive"
+    },
+    {
+      "role": "user",
+      "content": "How students connect to METUROAM service?"
+    },
+    {
+      "role": "assistant",
+      "content": "1. First, connect to the metuconnect SSID network.\n        2. Then, visit https://netregister.metu.edu.tr and follow the instructions to create a new meturoam password.\n        3. After creating the password, you can connect to meturoam network using your username (e.g., e123456) and the newly created password.\n        4. For more detailed instructions, please visit: [FAQ Link 1](https://faq.cc.metu.edu.tr/faq/guest-account-created-me-how-can-i-connect-meturoam-wireless-network) and [FAQ Link 2](https://faq.cc.metu.edu.tr/faq/how-connect-eduroam)\n\n        Note: If you already have a meturoam password, you do not need to connect to metuconnect.\n\n        Additional Information:\n        If you are a new student at METU, you can create your user code and password by visiting https://useraccount.metu.edu.tr/newstudent. For more information about METU IT Services, please visit http://map.metu.edu.tr/ or refer to the FAQ section on IT Services for new students: [FAQ Link 3](https://faq.cc.metu.edu.tr/faq/metuconnect) and [FAQ Link 4](https://faq.cc.metu.edu.tr/faq/meturoam).",
+      "feedback": "positive"
+    },
+    {
+      "role": "user",
+      "content": "If an international student do not have English exam Scorre, what s/he should do?"
+    },
+    {
+      "role": "assistant",
+      "content": " If you are an international student and do not have an English proficiency exam score, submitting one is not obligatory for the application to METU. However, if you are admitted, you can take ODT\u00dc English Proficiency Exam. If you do not satisfy the minimum score from this exam, you will attend English Preparatory Class at the Department of Basic English for one year. If you have a valid English Proficiency Exam Result (TOEFL, IELTS, or ODT\u00dc English Proficiency Exam), you can submit it during registration to be exempt from English Preparatory Class and start your undergraduate courses directly.",
+      "feedback": "positive"
+    },
+    {
+      "role": "user",
+      "content": "If an intrnational student does not have an Englsh exam scor, what shuld s/he do?"
+    },
+    {
+      "role": "assistant",
+      "content": " Hello! I'm here to help you with your questions about Middle East Technical University (METU).\n\n         As an international student, if you don\u2019t have an English proficiency exam score when applying to METU, you can still submit your application. Admitted students who do not submit a valid TOEFL, IELTS, or PTE ACADEMIC score during registration can take ODT\u00dc English Proficiency Exam.\n\n         If you have any other questions or need further assistance, feel free to ask! I'm here to help.\n\n         Enjoy your journey with METU!\n\n         P.S: If you are wondering about specific courses or clubs, feel free to ask. I'll be happy to help you with that as well!\n\n         For example, if you are interested in Environmental Engineering, you might find ENVE408 interesting. This course focuses on tackling open-ended engineering problems, using computers in professional life, working in groups, and formal report writing and oral presentation skills.\n\n         Or, if you are more into Mathematics, MATH114 could be a good fit for you. This course covers topics such as integration, sequences and infinite series, Taylor series, and functions of several variables.",
+      "feedback": "positive"
+    }
+  ]
+}
