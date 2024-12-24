@@ -1,13 +1,13 @@
 
 # MeETU - Retrieval-Augmented Generation (RAG) Model
 
-MeETU is an Retrieval-Augmented Generation (RAG) chatbot designed to provide intelligent question-answering and recommendations based on METU's (Middle East Technical University) FAQs and website content. The project leverages state-of-the-art technologies such as the **meta-llama/Llama-3.2-3B-Instruct** model from Hugging Face, FAISS, and Streamlit to deliver accurate and efficient responses.
+MeETU is an Retrieval-Augmented Generation (RAG) chatbot designed to provide intelligent question-answering and recommendations based on METU's (Middle East Technical University) FAQs and website content. The project leverages state-of-the-art technologies such as the **mistralai/Mistral-7B-Instruct-v0.3** model from Hugging Face, FAISS, and Streamlit to deliver accurate and efficient responses.
 
 ---
 
 ## **Features**
 
-- Advanced RAG architecture using `meta-llama/Llama-3.2-3B-Instruct` for natural language processing.
+- Advanced RAG architecture using `mistralai/Mistral-7B-Instruct-v0.3` for natural language processing.
 - Handles question-answering and recommendation tasks.
 - Powered by FAISS for efficient embedding storage and retrieval.
 - User-friendly interface via Streamlit.
